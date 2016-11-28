@@ -9,9 +9,9 @@ CFLAGS=-lrt -I $(INC_DIR) -std=gnu99
 
 TARGET=pppimpl
 _OBJS=main.o utils.o physical.o ahdlc.o ppp.o lcp.o ipcp.o
-_HEADERS=
+_HEADERS=common.h utils.h physical.h ahdlc.h ppp.h lcp.h ipcp.h
 OBJS=$(patsubst %,$(OBJ_DIR)/%,$(_OBJS))
-HEADERS=$(patsubst %,(INC_DIR)/%,$(_HEADERS))
+HEADERS=$(patsubst %,$(INC_DIR)/%,$(_HEADERS))
 
 all: debug
 

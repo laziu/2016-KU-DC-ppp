@@ -7,7 +7,7 @@
 
 typedef unsigned char	byte;
 typedef unsigned short	u16;
-typedef unsigned long	u32;
+typedef unsigned int	u32;
 
 #define BUFFER_SIZE 16384
 

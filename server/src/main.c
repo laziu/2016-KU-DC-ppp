@@ -92,7 +92,7 @@ int main(int argc, char* argv[])
 			}
 			else {	// ip
 				byte tb[8];
-				if (sscanf(argv[i], "%d.%d.%d.%d:%d.%d.%d.%d", tb, tb+1, tb+2, tb+3, tb+4, tb+5, tb+6, tb+7) == 8) {
+				if (sscanf(argv[i], "%hhu.%hhu.%hhu.%hhu:%hhu.%hhu.%hhu.%hhu", tb, tb+1, tb+2, tb+3, tb+4, tb+5, tb+6, tb+7) == 8) {
 					memcpy(f_src_ip, tb, 4);
 					memcpy(f_dst_ip, tb + 4, 4);
 				}
