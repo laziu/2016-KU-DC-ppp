@@ -21,6 +21,10 @@ debug: $(TARGET)
 release: CFLAGS+=-O3
 release: $(TARGET)
 
+$(OBJS): | $(OBJ_DIR)
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
